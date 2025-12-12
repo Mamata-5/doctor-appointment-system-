@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doctor Booking System — Frontend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🩺 Doctor Booking</div>
+    <div class="top-actions">
+      <input id="globalSearch" type="search" placeholder="Search doctors, patients, dates..." />
+      <button id="themeToggle" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <div class="app">
+    <nav class="sidebar" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li data-view="dashboard" class="active">Dashboard</li>
+        <li data-view="doctors">Doctors</li>
+        <li data-view="slots">Slots</li>
+        <li data-view="appointments">Appointments</li>
+        <li data-view="settings">Settings</li>
+      </ul>
+      <footer class="sidebar-footer">v1.0 • Offline demo</footer>
+    </nav>
+
+    <main class="content" id="content" role="main">
+      <!-- Views injected by JS -->
+    </main>
+  </div>
+
+  <!-- Modal shell -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modal-close" aria-label="Close">✖</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
